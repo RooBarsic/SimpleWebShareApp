@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install maven -y
 RUN apt-get install openjdk-8-jdk -y
 #RUN git clone https://github.com/RooBarsic/SimpleWebApp/tree/develop
-WORKDIR SimpleWebApp
+#WORKDIR SimpleWebApp
 RUN ls -l
 RUN mvn clean package
 ENTRYPOINT ["java","-jar","target/GitSimpleWebApp-1.0-SNAPSHOT"]
