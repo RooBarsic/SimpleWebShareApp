@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install maven -y
 RUN apt-get install openjdk-8-jdk -y
-RUN git clone https://github.com/RooBarsic/SimpleWebApp.git --branch feature/issue-10-github-actions
+RUN git clone https://github.com/RooBarsic/SimpleWebApp.git --branch develop
 WORKDIR SimpleWebApp
 RUN ls -l
 RUN mvn clean package
