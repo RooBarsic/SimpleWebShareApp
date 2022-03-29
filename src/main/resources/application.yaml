@@ -1,40 +1,40 @@
-## EMBEDDED SERVER CONFIGURATION (ServerProperties)
-#server:
-#  port: 8081
-#  http2:
-#    enabled: true
-#  compression:
-#    enabled: true
-#    min-response-size: 1024
-#    mime-types: text/html,text/css,application/javascript,application/json
+### EMBEDDED SERVER CONFIGURATION (ServerProperties)
+##server:
+##  port: 8081
+##  http2:
+##    enabled: true
+##  compression:
+##    enabled: true
+##    min-response-size: 1024
+##    mime-types: text/html,text/css,application/javascript,application/json
+##
+#spring:
+#  resources:
+#    cache:
+#      cachecontrol:
+#        cache-private: true
+#        must-revalidate: true
+#        max-age: 1h
 #
-spring:
-  resources:
-    cache:
-      cachecontrol:
-        cache-private: true
-        must-revalidate: true
-        max-age: 1h
-
-  datasource:
-    url: ${DATASOURCE_URL:"jdbc:postgresql://localhost:5433/itmo"}
-    username: ${DATASOURCE_USER:m2}
-    password: ${DATASOURCE_PASSWORD:m2}
-    driver-class-name: org.postgresql.Driver
-    hikari:
-      idle-timeout: ${DATASOURCE_IDLE_TIMEOUT:10000}
-
-  jpa:
-    properties:
-      hibernate:
-        ddl-auto: update
-        show_sql: true
-        format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-
-  flyway:
-    enabled: true
-    baseline-on-migrate: true
-    baseline-version: 1
-    check-location: true
-    locations: "classpath:db_migration"
+#  datasource:
+#    url: ${DATASOURCE_URL:"jdbc:postgresql://localhost:5433/itmo"}
+#    username: ${DATASOURCE_USER:m2}
+#    password: ${DATASOURCE_PASSWORD:m2}
+#    driver-class-name: org.postgresql.Driver
+#    hikari:
+#      idle-timeout: ${DATASOURCE_IDLE_TIMEOUT:10000}
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        ddl-auto: update
+#        show_sql: true
+#        format_sql: true
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#
+#  flyway:
+#    enabled: true
+#    baseline-on-migrate: true
+#    baseline-version: 1
+#    check-location: true
+#    locations: "classpath:db_migration"
