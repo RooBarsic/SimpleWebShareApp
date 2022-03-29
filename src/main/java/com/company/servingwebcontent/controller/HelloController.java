@@ -18,4 +18,5 @@ public class HelloController {
             return "Salam my friend, " + name;
         }
     }
+
 }
