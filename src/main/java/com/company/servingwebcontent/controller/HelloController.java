@@ -17,5 +17,7 @@ public class HelloController {
             System.out.println("Got GET /hello request with name = " + name);
             return "Salam my friend, " + name;
         }
+
     }
+
 }
